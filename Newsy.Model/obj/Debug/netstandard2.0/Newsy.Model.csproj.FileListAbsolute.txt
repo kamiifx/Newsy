@@ -1,0 +1,9 @@
+C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.Model\bin\Debug\netstandard2.0\Newsy.Model.deps.json
+C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.Model\bin\Debug\netstandard2.0\Newsy.Model.dll
+C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.Model\bin\Debug\netstandard2.0\Newsy.Model.pdb
+C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.Model\obj\Debug\netstandard2.0\Newsy.Model.csprojAssemblyReference.cache
+C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.Model\obj\Debug\netstandard2.0\Newsy.Model.AssemblyInfoInputs.cache
+C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.Model\obj\Debug\netstandard2.0\Newsy.Model.AssemblyInfo.cs
+C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.Model\obj\Debug\netstandard2.0\Newsy.Model.csproj.CoreCompileInputs.cache
+C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.Model\obj\Debug\netstandard2.0\Newsy.Model.dll
+C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.Model\obj\Debug\netstandard2.0\Newsy.Model.pdb
