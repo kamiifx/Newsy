@@ -26,12 +26,17 @@ namespace Newsy.App.Views
         {
             this.InitializeComponent();
             this.cancelbtn.Click += cancelbtn_Click;
+            this.loginbtn.Click += Loginbtn_OnClick;
 
         }
 
         private void cancelbtn_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void Loginbtn_OnClick(object sender, RoutedEventArgs e)
+        {
         }
     }
 }

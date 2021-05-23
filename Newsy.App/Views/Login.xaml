@@ -26,7 +26,7 @@
 
                 <Button x:Name="loginbtn" Content="Login" VerticalAlignment="Center" CornerRadius="5" 
                         HorizontalAlignment="Center" Margin="20" Height="50" Width="250" Background="#2ecc71"
-                        FontSize="22" FontFamily="Calibri"/>
+                        FontSize="22" FontFamily="Calibri" Click="Loginbtn_OnClick"/>
 
                 <Button x:Name="cancelbtn" Content="Cancel" VerticalAlignment="Center" CornerRadius="5"
                         HorizontalAlignment="Center" Height="50" Margin="20" Width="250" Background="#e74c3c"

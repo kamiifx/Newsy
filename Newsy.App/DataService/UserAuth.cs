@@ -47,5 +47,10 @@ namespace Newsy.App.DataService
 
 
         }
+
+        public async Task<User> LoginAuth(User user)
+        {
+
+        }
     }
 }
