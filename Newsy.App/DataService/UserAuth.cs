@@ -1,34 +1,51 @@
 ﻿using System;
+using System.Collections.Immutable;
 using Newsy.Model;
 using System.Net.Http;
-using System.Threading;
+using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Newsy.App.DataService
 {
     public class UserAuth
     {
-        private static HttpClient http = new HttpClient();
-        static readonly Uri uri = new Uri("http://localhost:5000/api/Users");
+        readonly HttpClient client = new HttpClient();
+        static readonly Uri uri = new Uri("http://localhost:60048/api/Users");
 
-        public async Task<bool> RegisterUser(string email, string password)
+        public async Task<bool> RegisterUser(User user)
         {
-            User newuser = new User()
-            {
-                Email = email,
-                Password = password
-            };
 
-            var response = await http.PostAsJsonAsync(uri, newuser);
-            if (response.IsSuccessStatusCode)
+            string jsonUserAdd = JsonConvert.SerializeObject(user);
+
+            string jsonUsers = await client.GetStringAsync(uri);
+
+            var pastUsers = JsonConvert.DeserializeObject<User[]>(jsonUsers);
+
+            foreach (var u in pastUsers)
             {
-                return true;
+                if (u.Email == user.Email)
+                {
+                    System.Diagnostics.Debug.WriteLine("User Exsist");
+                    return false;
+                }
             }
-            else
-            {
+            HttpResponseMessage result = await client.PostAsync(uri, new StringContent(jsonUserAdd, Encoding.UTF8, "application/json"));
+                if (result.IsSuccessStatusCode)
+                {
+                   
+                    jsonUserAdd = await result.Content.ReadAsStringAsync();
+                    var userAdded = JsonConvert.DeserializeObject<User>(jsonUserAdd);
+                    await client.DeleteAsync($"http://localhost:60048/api/Users/{userAdded.Id + 1}");
+                    return true;
+                }
+                else
+                {
                 return false;
 
-            }
+                }
+
+
         }
     }
 }

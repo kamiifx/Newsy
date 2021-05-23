@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QLkf1BxyRBgkZ4t60yjAi5hEA0zoYLbI6XhMnwHLQY3KCDCpaQOhJq8LpRdpHxEp2Nl03CY1oCoDwvGw4vRrxA==",
+  "dgSpecHash": "HXR7B718I9juHwlHkHbnqg9BFiqXGqJe0k2xepFWxkMifBVxooMACVJ/k31TW7bRt0xfXalED044zIHbYT5ISg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kamii\\Documents\\School\\dotNET\\Newsy\\Newsy.Data\\Newsy.Data.csproj",
+  "projectFilePath": "C:\\Users\\Kamii\\Documents\\School\\Newsy\\Newsy.Data\\Newsy.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kamii\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Kamii\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",

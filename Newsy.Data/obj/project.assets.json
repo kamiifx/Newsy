@@ -5750,11 +5750,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kamii\\Documents\\School\\dotNET\\Newsy\\Newsy.Data\\Newsy.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Kamii\\Documents\\School\\Newsy\\Newsy.Data\\Newsy.Data.csproj",
       "projectName": "Newsy.Data",
-      "projectPath": "C:\\Users\\Kamii\\Documents\\School\\dotNET\\Newsy\\Newsy.Data\\Newsy.Data.csproj",
+      "projectPath": "C:\\Users\\Kamii\\Documents\\School\\Newsy\\Newsy.Data\\Newsy.Data.csproj",
       "packagesPath": "C:\\Users\\Kamii\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kamii\\Documents\\School\\dotNET\\Newsy\\Newsy.Data\\obj\\",
+      "outputPath": "C:\\Users\\Kamii\\Documents\\School\\Newsy\\Newsy.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -5777,8 +5777,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Kamii\\Documents\\School\\dotNET\\Newsy\\Newsy.Model\\Newsy.Model.csproj": {
-              "projectPath": "C:\\Users\\Kamii\\Documents\\School\\dotNET\\Newsy\\Newsy.Model\\Newsy.Model.csproj"
+            "C:\\Users\\Kamii\\Documents\\School\\Newsy\\Newsy.Model\\Newsy.Model.csproj": {
+              "projectPath": "C:\\Users\\Kamii\\Documents\\School\\Newsy\\Newsy.Model\\Newsy.Model.csproj"
             }
           }
         }

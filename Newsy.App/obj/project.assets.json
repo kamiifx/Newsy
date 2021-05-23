@@ -20782,11 +20782,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kamii\\Documents\\School\\dotNET\\Newsy\\Newsy.App\\Newsy.App.csproj",
+      "projectUniqueName": "C:\\Users\\Kamii\\Documents\\School\\Newsy\\Newsy.App\\Newsy.App.csproj",
       "projectName": "Newsy.App",
-      "projectPath": "C:\\Users\\Kamii\\Documents\\School\\dotNET\\Newsy\\Newsy.App\\Newsy.App.csproj",
+      "projectPath": "C:\\Users\\Kamii\\Documents\\School\\Newsy\\Newsy.App\\Newsy.App.csproj",
       "packagesPath": "C:\\Users\\Kamii\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kamii\\Documents\\School\\dotNET\\Newsy\\Newsy.App\\obj\\",
+      "outputPath": "C:\\Users\\Kamii\\Documents\\School\\Newsy\\Newsy.App\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -20810,8 +20810,8 @@
       "frameworks": {
         "uap10.0.17763": {
           "projectReferences": {
-            "C:\\Users\\Kamii\\Documents\\School\\dotNET\\Newsy\\Newsy.Model\\Newsy.Model.csproj": {
-              "projectPath": "C:\\Users\\Kamii\\Documents\\School\\dotNET\\Newsy\\Newsy.Model\\Newsy.Model.csproj"
+            "C:\\Users\\Kamii\\Documents\\School\\Newsy\\Newsy.Model\\Newsy.Model.csproj": {
+              "projectPath": "C:\\Users\\Kamii\\Documents\\School\\Newsy\\Newsy.Model\\Newsy.Model.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YCXZte1de9/UCHTIDqPxnkDZ6pPtSI5mzdvw3nucyQUgDGFLIcjhPUH0wLIyO9ng8DK1Ck2sKXH8lwYcbNJMvA==",
+  "dgSpecHash": "h9LugA5TDedJs2ot4NdA3Wn0MljWtFlKJabIgp59sqLp5ZR3UZ21psY6752NZhAhbkAtBD4jBQzpPBWcowr3dg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kamii\\Documents\\School\\dotNET\\Newsy\\Newsy.App\\Newsy.App.csproj",
+  "projectFilePath": "C:\\Users\\Kamii\\Documents\\School\\Newsy\\Newsy.App\\Newsy.App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kamii\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Users\\Kamii\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0YWC5iQfoQ6bI25eIxnKbArwESA9hf8DTqSNf0mdiRWAWlvHv4e05rtoR7DxhbCAuvd13wKLusj682wmQ5Io0g==",
+  "dgSpecHash": "JVpv4I4QDLrt3tRZy1aOJv2A/BXzwlRthmHKUoC0oF6yD3tYi1nNZgJbOiKnntPjAyRR7bYNEglEpzIh7KpzgA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kamii\\Documents\\School\\dotNET\\Newsy\\Newsy.Api\\Newsy.Api.csproj",
+  "projectFilePath": "C:\\Users\\Kamii\\Documents\\School\\Newsy\\Newsy.Api\\Newsy.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kamii\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Kamii\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

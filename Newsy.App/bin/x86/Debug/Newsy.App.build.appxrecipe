@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>31d5cd5f-399f-4cb2-875f-444f47ca1a7a</PackageIdentityName>
     <PackageIdentityPublisher>CN=Kamii</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Kamii\Documents\School\Newsy\Newsy.App\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Kamii\Documents\School\Newsy\Newsy.App\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\bin\x86\Debug\Newsy.App.exe">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\bin\x86\Debug\Newsy.App.exe">
       <PackagePath>entrypoint\Newsy.App.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kamii\.nuget\packages\microsoft.aspnet.webapi.client\5.2.7\lib\netstandard2.0\System.Net.Http.Formatting.dll">
@@ -79,7 +79,7 @@
     <AppxPackagedFile Include="C:\Users\Kamii\.nuget\packages\win2d.uwp\1.19.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.Model\bin\Debug\netstandard2.0\Newsy.Model.dll">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.Model\bin\Debug\netstandard2.0\Newsy.Model.dll">
       <PackagePath>Newsy.Model.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kamii\.nuget\packages\robmikh.compositionsurfacefactory\0.7.1\lib\uap10.0\Robmikh.CompositionSurfaceFactory.winmd">
@@ -94,73 +94,73 @@
     <AppxPackagedFile Include="C:\Users\Kamii\.nuget\packages\microsoft.toolkit.uwp.ui.controls\2.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\Microsoft.Toolkit.Uwp.UI.Controls.xr.xml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\Microsoft.Toolkit.Uwp.UI.Controls.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\Assets\newsp.png">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\Assets\newsp.png">
       <PackagePath>Assets\newsp.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\Assets\newspaper.png">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\Assets\newspaper.png">
       <PackagePath>Assets\newspaper.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\bin\x86\Debug\Newsy.App.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\bin\x86\Debug\Newsy.App.xr.xml">
       <PackagePath>Newsy.App.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\bin\x86\Debug\Views\DailyNews.xbf">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\bin\x86\Debug\Views\DailyNews.xbf">
       <PackagePath>Views\DailyNews.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\bin\x86\Debug\Views\Favorite.xbf">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\bin\x86\Debug\Views\Favorite.xbf">
       <PackagePath>Views\Favorite.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\bin\x86\Debug\Views\Login.xbf">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\bin\x86\Debug\Views\Login.xbf">
       <PackagePath>Views\Login.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\bin\x86\Debug\Views\LoginPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\bin\x86\Debug\Views\LoginPage.xbf">
       <PackagePath>Views\LoginPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\bin\x86\Debug\Views\NewsNav.xbf">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\bin\x86\Debug\Views\NewsNav.xbf">
       <PackagePath>Views\NewsNav.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\bin\x86\Debug\Views\Register.xbf">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\bin\x86\Debug\Views\Register.xbf">
       <PackagePath>Views\Register.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\dotNET\Newsy\Newsy.App\bin\x86\Debug\Core\Newsy.App.exe">
+    <AppxPackagedFile Include="C:\Users\Kamii\Documents\School\Newsy\Newsy.App\bin\x86\Debug\Core\Newsy.App.exe">
       <PackagePath>Newsy.App.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

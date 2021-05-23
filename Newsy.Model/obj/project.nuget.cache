@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pIm0BgG3I4B8UYqbxfSOMK2lPk2p0sXGWLH6sKrU29O1XUNwnKIZDTLYAraW8Ik+YVm68s6hqT+rqmITJ8n8fQ==",
+  "dgSpecHash": "2pozByXuYK2DJyzSGJekAgjZttNu+Y1PH6pJBJWYlSn9J5ABicnNppfGxwl+ZNxatYpc3iCoSWwywtRpqMUI2A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kamii\\Documents\\School\\dotNET\\Newsy\\Newsy.Model\\Newsy.Model.csproj",
+  "projectFilePath": "C:\\Users\\Kamii\\Documents\\School\\Newsy\\Newsy.Model\\Newsy.Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kamii\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Kamii\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

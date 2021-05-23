@@ -44,13 +44,20 @@ namespace Newsy.App.Views
             UserAuth auth = new UserAuth();
             string email = this.email.Text.ToString();
             string password = this.password.Text.ToString();
+
+            User newuser = new User()
+            {
+                Email = email,
+                Password = password
+            };
+
             if (this.password.Text.Length < 6)
             {
                 this.errormsg.Text = "Password to Short";
             }
             else
             {
-                auth.RegisterUser(email, password);
+                auth.RegisterUser(newuser);
             }
 
         }
