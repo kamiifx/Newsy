@@ -18,9 +18,9 @@
 
         <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
 
-            <TextBox Width="650" Height="50" Text="Email" CornerRadius="4" Margin="20"/>
+            <TextBox x:Name="emailinput" Width="650" Height="50" Text="Email" CornerRadius="4" Margin="20"/>
 
-            <TextBox Width="650" Height="50" Text="Password" CornerRadius="4" Margin="20"/>
+            <TextBox x:Name="passwordinput" Width="650" Height="50" Text="Password" CornerRadius="4" Margin="20"/>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
 

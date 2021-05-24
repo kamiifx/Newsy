@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -24,11 +25,39 @@ namespace Newsy.App.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Register : Page
+    public sealed partial class Register : Page, INotifyPropertyChanged
     {
+        UserAuth auth = new UserAuth();
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public static readonly DependencyProperty TextProperty = DependencyProperty.Register(
+            "Text", typeof(string), typeof(MainPage), new PropertyMetadata(default(string)));
+
+
+        public string ErrorMessage
+        {
+            get { return (string) GetValue(TextProperty);}
+            set
+            {
+                SetValue(TextProperty,value);
+                OnPropertyChanged("ErrorMessage");
+            }
+            
+        }
+
+        private void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
         public Register()
         {
             this.InitializeComponent();
+            //ErrorMessage = auth.ErrorMsg;
             this.cancelbtn.Click += cancelbtn_Click;
             this.regibtn.Click += Regibtn_OnClick;
 
@@ -39,11 +68,12 @@ namespace Newsy.App.Views
             this.Frame.Navigate(typeof(MainPage));
         }
 
-        private void Regibtn_OnClick(object sender, RoutedEventArgs e)
+        private async void Regibtn_OnClick(object sender, RoutedEventArgs e)
         {
-            UserAuth auth = new UserAuth();
             string email = this.email.Text.ToString();
-            string password = this.password.Text.ToString();
+            string password = this.password.Password.ToString();
+            this.errormsg.Text = auth.ErrorMsg;
+            //System.Diagnostics.Debug.WriteLine("2: " + ErrorMessage);
 
             User newuser = new User()
             {
@@ -51,15 +81,14 @@ namespace Newsy.App.Views
                 Password = password
             };
 
-            if (this.password.Text.Length < 6)
+            if (!await auth.RegisterUser(newuser))
             {
-                this.errormsg.Text = "Password to Short";
+                this.errormsg.Text = "User Already Exsist";
             }
             else
             {
-                auth.RegisterUser(newuser);
+                this.Frame.Navigate(typeof(Login));
             }
-
         }
     }
 }

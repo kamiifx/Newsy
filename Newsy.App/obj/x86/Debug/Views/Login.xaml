@@ -18,17 +18,17 @@
 
         <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
 
-            <TextBox Width="650" Height="50" Text="Email" CornerRadius="4" Margin="20"/>
+            <TextBox x:ConnectionId='2' x:Name="emailinput" Width="650" Height="50" Text="Email" CornerRadius="4" Margin="20"/>
 
-            <TextBox Width="650" Height="50" Text="Password" CornerRadius="4" Margin="20"/>
+            <TextBox x:ConnectionId='3' x:Name="passwordinput" Width="650" Height="50" Text="Password" CornerRadius="4" Margin="20"/>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
 
-                <Button x:ConnectionId='2' x:Name="loginbtn" Content="Login" VerticalAlignment="Center" CornerRadius="5" 
+                <Button x:ConnectionId='4' x:Name="loginbtn" Content="Login" VerticalAlignment="Center" CornerRadius="5" 
                         HorizontalAlignment="Center" Margin="20" Height="50" Width="250" Background="#2ecc71"
-                        FontSize="22" FontFamily="Calibri"/>
+                        FontSize="22" FontFamily="Calibri"                         />
 
-                <Button x:ConnectionId='3' x:Name="cancelbtn" Content="Cancel" VerticalAlignment="Center" CornerRadius="5"
+                <Button x:ConnectionId='5' x:Name="cancelbtn" Content="Cancel" VerticalAlignment="Center" CornerRadius="5"
                         HorizontalAlignment="Center" Height="50" Margin="20" Width="250" Background="#e74c3c"
                         FontSize="22" FontFamily="Calibri"                        />
 

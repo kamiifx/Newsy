@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Newsy.App.DataService;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,6 +23,7 @@ namespace Newsy.App.Views
     /// </summary>
     public sealed partial class Login : Page
     {
+        private UserAuth auth = new UserAuth();
         public Login()
         {
             this.InitializeComponent();
@@ -37,6 +39,9 @@ namespace Newsy.App.Views
 
         private void Loginbtn_OnClick(object sender, RoutedEventArgs e)
         {
+            string email = this.emailinput.ToString();
+            string password = this.passwordinput.ToString();
+            auth.LoginAuth(email, password);
         }
     }
 }
