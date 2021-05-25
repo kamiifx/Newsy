@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -27,6 +29,7 @@ namespace Newsy.App.Views
         public Login()
         {
             this.InitializeComponent();
+            NavigationCacheMode = NavigationCacheMode.Enabled;
             this.cancelbtn.Click += cancelbtn_Click;
             this.loginbtn.Click += Loginbtn_OnClick;
 
@@ -37,11 +40,21 @@ namespace Newsy.App.Views
             this.Frame.Navigate(typeof(MainPage));
         }
 
-        private void Loginbtn_OnClick(object sender, RoutedEventArgs e)
+        private async void Loginbtn_OnClick(object sender, RoutedEventArgs e)
         {
-            string email = this.emailinput.ToString();
-            string password = this.passwordinput.ToString();
-            auth.LoginAuth(email, password);
+            string email = this.emailinput.Text.ToString();
+            string password = this.passwordinput.Text.ToString();
+            this.loading.IsActive = true;
+
+            if (!await auth.LoginAuth(email, password)) 
+            {
+                System.Diagnostics.Debug.WriteLine("Something Went Wrong..");
+                this.loading.IsActive = false;
+            }
+            else
+            {
+                this.Frame.Navigate(typeof(NewsNav));
+            }
         }
     }
 }

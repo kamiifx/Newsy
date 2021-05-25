@@ -25,6 +25,7 @@ namespace Newsy.App.Views
         public NewsNav()
         {
             this.InitializeComponent();
+            this.mainframe.Navigate(typeof(DailyNews));
         }
     }
 }

@@ -5,6 +5,7 @@ using Newsy.Model;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Identity.Client;
 using Newsy.App.Views;
 using Newtonsoft.Json;
 
@@ -28,14 +29,11 @@ namespace Newsy.App.DataService
 
         public User LoggedUser;
 
-        public string ErrorMsg = "";
-
-
         public async Task<bool> RegisterUser(User user)
         {
             if (user.Password.Length < 6)
             {
-                ErrorMsg = "Password to Short!";
+                System.Diagnostics.Debug.WriteLine("Password To Short");
                 return false;
             }
             try
@@ -50,7 +48,7 @@ namespace Newsy.App.DataService
                 {
                     if (u.Email == user.Email)
                     {
-                        ErrorMsg = "User Already Exsist";
+                        System.Diagnostics.Debug.WriteLine("User Already Exsist");
                         return false;
                     }
                 }
@@ -59,7 +57,7 @@ namespace Newsy.App.DataService
                 {
                     jsonUserAdd = await result.Content.ReadAsStringAsync();
                     var userAdded = JsonConvert.DeserializeObject<User>(jsonUserAdd);
-                    await client.DeleteAsync($"http://localhost:60048/api/Users/{userAdded.Id + 1}");
+                    await client.DeleteAsync($"http://localhost:60048/api/Users/{userAdded.Id + 1}"); //Weird Issue Fix, bugs with http.
                     return true;
                 }
                 else
@@ -69,7 +67,7 @@ namespace Newsy.App.DataService
             }
             catch (Exception e)
             {
-                ErrorMsg = e.Message;
+                System.Diagnostics.Debug.WriteLine(e.Message);
                 Console.WriteLine(e);
                 throw;
             }
@@ -87,9 +85,64 @@ namespace Newsy.App.DataService
                 if (u.Email == email && u.Password == password)
                 {
                     System.Diagnostics.Debug.WriteLine($"{u.Id} : {u.Email} : {u.Password}");
+                    LoggedUser = u;
                     return true;
                 }
             }
+            return false;
+        }
+
+        public async Task<bool> OutlookLogin()
+        {
+            string[] scopes = new string[]
+            {
+                "https://graph.microsoft.com/user.read"
+            };
+            string clientId = "e87b2067-612c-48b3-8664-e469a7ae594c"; //Mutlitentant Personal and Orginizational.
+            string redirectUri = "https://login.microsoftonline.com/common/oauth2/nativeclient";
+
+
+            var authApp = PublicClientApplicationBuilder.Create(clientId)
+                .WithRedirectUri(redirectUri)
+                .Build();
+            var result = await authApp.AcquireTokenInteractive(scopes)
+                .ExecuteAsync();
+            System.Diagnostics.Debug.WriteLine("result: " + result.Account);
+
+            string email = result.Account.Username.ToString();
+            string password = result.TenantId.ToString();
+
+            string jsonUsers = await client.GetStringAsync(uri);
+            var pastUsers = JsonConvert.DeserializeObject<User[]>(jsonUsers);
+
+            foreach (var u in pastUsers)
+            {
+                if (u.Email == email)
+                {
+                    System.Diagnostics.Debug.WriteLine($"HERE! {u.Id} : {u.Email} : {u.Password}");
+                    LoggedUser = u;
+                    return true;
+                }
+            }
+
+            User outlookUser = new User()
+            {
+                Email = result.Account.Username,
+                Password = result.TenantId
+            };
+
+            string jsonUserAdd = JsonConvert.SerializeObject(outlookUser);
+            HttpResponseMessage resultOutlook = await client.PostAsync(uri, new StringContent(jsonUserAdd, Encoding.UTF8, "application/json"));
+
+            if (resultOutlook.IsSuccessStatusCode)
+            {
+                jsonUserAdd = await resultOutlook.Content.ReadAsStringAsync();
+                var userAdded = JsonConvert.DeserializeObject<User>(jsonUserAdd);
+                await client.DeleteAsync($"http://localhost:60048/api/Users/{userAdded.Id + 1}");
+                LoggedUser = outlookUser;
+                return true;
+            }
+
             return false;
         }
     }

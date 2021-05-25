@@ -1,16 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="CheckName" />
+  </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
       <RootProperty Name="RequestedTheme" />
       <RootProperty Name="Content" />
+      <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
-      <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
+      <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
@@ -19,6 +23,22 @@
       <RootMethod Name="GetColumnSpan" />
       <RootMethod Name="SetColumnSpan" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="ItemTemplate" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Text" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding" />
     <RootType FullName="Newsy.App.Views.DailyNews" />
     <RootType FullName="Newsy.App.Views.Favorite" />
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
@@ -32,20 +52,28 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ProgressRing">
+      <RootProperty Name="IsActive" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Children" />
       <RootProperty Name="Orientation" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
-      <RootProperty Name="Text" />
+      <RootProperty Name="PlaceholderText" />
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
@@ -71,13 +99,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="Text" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="HorizontalAlignment" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Frame" />
     <RootType FullName="Newsy.App.Views.NewsNav" />
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
@@ -87,7 +108,6 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="PlaceholderText" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
     <RootType FullName="Newsy.App.Views.Register" />
   </Roots.RootTypes>
 </Roots>

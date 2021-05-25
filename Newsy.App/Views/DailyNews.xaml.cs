@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,9 +24,30 @@ namespace Newsy.App.Views
     /// </summary>
     public sealed partial class DailyNews : Page
     {
+        public ObservableCollection<Model.DailyNews> Daily { get; set; }
+        private DataAccess.DailyNews news = new DataAccess.DailyNews();
         public DailyNews()
         {
             this.InitializeComponent();
+            Daily = new ObservableCollection<Model.DailyNews>();
+            Loaded += Page_Loaded;
+        }
+
+        public async Task initNews()
+        {
+            DataAccess.DailyNews news = new DataAccess.DailyNews();
+            var dailyNews = await news.LoadNews();
+
+            foreach (var dailnew in dailyNews)
+            {
+                Daily.Add(dailnew);
+            }
+        }
+
+
+        private async void Page_Loaded(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            await initNews();
         }
     }
 }

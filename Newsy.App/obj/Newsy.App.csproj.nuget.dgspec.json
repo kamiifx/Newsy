@@ -49,6 +49,10 @@
               "target": "Package",
               "version": "[5.2.7, )"
             },
+            "Microsoft.Identity.Client": {
+              "target": "Package",
+              "version": "[4.31.0, )"
+            },
             "Microsoft.NETCore.UniversalWindowsPlatform": {
               "target": "Package",
               "version": "[6.2.11, )"
@@ -56,6 +60,14 @@
             "Microsoft.Toolkit.Uwp.UI.Controls": {
               "target": "Package",
               "version": "[2.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.Reactive": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "System.Text.Json": {
               "target": "Package",
@@ -140,6 +152,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             },
             "System.ComponentModel.Annotations": {
               "target": "Package",

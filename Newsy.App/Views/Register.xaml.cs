@@ -72,17 +72,15 @@ namespace Newsy.App.Views
         {
             string email = this.email.Text.ToString();
             string password = this.password.Password.ToString();
-            this.errormsg.Text = auth.ErrorMsg;
-            //System.Diagnostics.Debug.WriteLine("2: " + ErrorMessage);
-
             User newuser = new User()
             {
                 Email = email,
                 Password = password
             };
-
+            this.loading.IsActive = true;
             if (!await auth.RegisterUser(newuser))
             {
+                this.loading.IsActive = false;
                 this.errormsg.Text = "User Already Exsist";
             }
             else
