@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 
 namespace Newsy.App.DataAccess
 {
@@ -13,7 +14,10 @@ namespace Newsy.App.DataAccess
             string json =
                 await client.GetStringAsync(
                     "http://newsapi.org/v2/top-headlines?country=no&apiKey=ebba72b634e64465a4990fcdd39dfbb1");
-            var news = JsonConvert.DeserializeObject<Model.DailyNews[]>(json);
+            JObject o = JObject.Parse(json);
+            JArray ja = (JArray) o["articles"];
+            System.Diagnostics.Debug.WriteLine("HERE!! : " + ja.ToString());
+            Model.DailyNews[] news = JsonConvert.DeserializeObject<Model.DailyNews[]>(ja.ToString());
 
             return news;
         }

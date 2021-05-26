@@ -5,16 +5,49 @@
     xmlns:local="using:Newsy.App.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:effects="using:Microsoft.Graphics.Canvas.Effects"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Light" d:DesignWidth="1468" d:DesignHeight="1176" Loaded="Page_Loaded">
 
+
+
+    <Page.Resources>
+        <DataTemplate x:Key="NewsTemplate" >
+            <Grid
+                Background="White"
+                BorderThickness="1">
+                <Image
+                        Source="{Binding urlToImage}"
+                        Stretch="UniformToFill"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10">
+                    <StackPanel.Background>
+                        <AcrylicBrush Opacity="0.58"/>
+                    </StackPanel.Background>
+                    <RichTextBlock  HorizontalAlignment="Left"  FontSize="17">
+                        <Paragraph>
+                            <Bold>
+                                <Run Text="{Binding Title}"/>
+                            </Bold>
+                        </Paragraph>
+                    </RichTextBlock>
+
+                    <RichTextBlock  HorizontalAlignment="Left" FontSize="15">
+                        <Paragraph>
+                            <Run Text="{Binding Description}"/>
+                        </Paragraph>
+                    </RichTextBlock>
+                </StackPanel>
+
+
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
     <Grid>
-        <ListView ItemsSource="{x:Bind Daily}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding CheckName}"/>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <controls:AdaptiveGridView ItemsSource="{x:Bind Daily}" StretchContentForSingleRow="False" OneRowModeEnabled="False" ItemHeight="350" DesiredWidth="560" SelectionMode="Single" IsItemClickEnabled="True" ItemTemplate="{StaticResource NewsTemplate}"/>
     </Grid>
 </Page>
+

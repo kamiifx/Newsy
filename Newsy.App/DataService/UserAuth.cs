@@ -28,6 +28,7 @@ namespace Newsy.App.DataService
         static readonly Uri uri = new Uri("http://localhost:60048/api/Users");
 
         public User LoggedUser;
+        public string EmailUser = "";
 
         public async Task<bool> RegisterUser(User user)
         {
@@ -120,6 +121,7 @@ namespace Newsy.App.DataService
                 if (u.Email == email)
                 {
                     System.Diagnostics.Debug.WriteLine($"HERE! {u.Id} : {u.Email} : {u.Password}");
+                    EmailUser = u.Email.ToString();
                     LoggedUser = u;
                     return true;
                 }

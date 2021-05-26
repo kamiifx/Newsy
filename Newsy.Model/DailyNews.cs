@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Newsy.Model
 {
-    public class DailyNews:List<object>
+    public class DailyNews
     {
         public int Id { get; set; }
         public string Name { get; set; }
